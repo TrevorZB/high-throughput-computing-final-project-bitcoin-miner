@@ -1,0 +1,94 @@
+######################## OpenMPI + OpenMP For Loop Miner #######################
+                                                                                
+The OpenMPI + OpenMP For Loop Bitcoin Miner utilizes OpenMPI to spawn multiple  
+processes across multiple nodes. Each process then utilizes OpenMP to spawn     
+multiple threads to share the work through the hashing process. This is the     
+fastest version of the CPU Bitcoin miner.                                       
+                                                                                
+Iterations: 1048576
+Nodes: 1
+Processes: 24
+Threads per Process: 2
+Number of zeros needed at front of hash for hash to be small enough: 8
+Beginning Mining... (Only showing 25 of the calculated hashes)...               
+Calculated hash:
+590526255fd40024078dc24c4c03f6dd2d1ce6d821d16c55ffc0ae4373f8d5fa
+Calculated hash:
+04f9e67c0d1a302244d28ff18e1473fbc9105fe24c4d4ba56c93db02f5aff5a5
+Calculated hash:
+76938c824e3930a04fb94957a60956e9b0a71fa27f0195eda76719defe62aef2
+Calculated hash:
+2debc0dd6e97354e1a151ecb6f211fb56b0ed84feb7447f4254e643d5c048a40
+Calculated hash:
+40583a3cc86bcb3e4fdd2c5cc270a29ee7c26707dfc83819116434709d0b25f8
+Calculated hash:
+45adae4d92f492039d3587853a9cc07285427a064a2a08ee0eb24b93ae135357
+Calculated hash:
+724fb831bed10d788a89b2995b50b8ac4f695f16188fee6febb5f65761b442c4
+Calculated hash:
+b762b9f47b9930220ee612a51bd7eafc95fa12cca8dbc5a387bb38e1487df017
+Calculated hash:
+0a814f579fa0be3fdfb50b39dd02a0f9291abcc97d7fd78de8702e030b836995
+Calculated hash:
+4b435c100597da70643d750b4dd11764a5ce6f6fcc670474c0c17899d14333f0
+Calculated hash:
+bb6f7522f638c5b99a11b073ee308f62b5393c615e113861e275911423d4ebdf
+Calculated hash:
+4fe9c5d3c8a4753d5e8c77274717ba4806e94b5887cefbfcd877c832e74a2f6b
+Calculated hash:
+72634c6d579444bc35e8f3facc1ecafc02027122b9c349bb3b1fd439b5001b86
+Calculated hash:
+58d2b013e4b3b14cdc329c7f1807bfb136cb832acd9f074d5c7d6181d5cc3da7
+Calculated hash:
+17386aea1f1123d486d580b00d467e51c6a706652bdaaf7c5d3e9b28683699f8
+Calculated hash:
+525e20ea79115651b6fb37647d4c1e2337bc4394240fd7a3c3f29b6c4cc92eb3
+Calculated hash:
+c90e9a3f912d743cee3717c8617a947081fb86fd3555d25a329f22157c636335
+Calculated hash:
+edfaaa1ecd1331296925e4977f0081a32e02a683d1180182c1bce09c10d78a09
+Calculated hash:
+eef5f3e417baf2cafec378fa364873c57f61b6ffcf843dafa5e6531c53603ab5
+Calculated hash:
+94519d1f8c7f153535f8af08a409fed8395b9e854fd8c733c28a804b04a81268
+Calculated hash:
+77e096a6d493626d519781d08699f09ecd3e5e95eaa3a3c102acbfbab3070a61
+Calculated hash:
+51a3f9db2b3974ace7ce3273e35310101eb3c9b1fd4e5ecd931ae0abc5c5f09f
+Calculated hash:
+e6544acee4f1e590ff71f43a73dcd04063a4e7760c3e568c0f599ea5ee33cf8d
+Calculated hash:
+4c93c0b8e615f62f39d6654f5f34d9118f157ef1892d8bf43590e0910c7de401
+Calculated hash:
+9de1dadc0b363f05a7c1077c1fc8534c07f3628c4a15b5c09cc43b2e16d184dc
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 1
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 2
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 3
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 4
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 5
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 6
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 7
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 8
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 9
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 10
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 11
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 12
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 13
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 14
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 15
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 16
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 17
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 18
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 19
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 20
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 21
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 22
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 23
+Mining finished                                                             
+1048576 iterations took: 146.013ms
+Hash Rate: 7.18138MH/s
+No solution found. Better luck next time!
+                                                                                
+################## End of the OpenMPI + OpenMP For Loop Miner ##################
+                                                                                
+                                                                                

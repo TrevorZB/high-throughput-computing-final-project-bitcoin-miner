@@ -1,0 +1,67 @@
+############################## OpenMP Task Miner ###############################
+                                                                                
+The OpenMP Task Bitcoin miner uses OpenMP task generation to share work during  
+the hashing process. This is the third fastest of the CPU Bitcoin miners.       
+                                                                                
+Iterations: 1048576
+Threads: 18
+Number of zeros needed at front of hash for hash to be small enough: 8
+Beginning Mining... (Only showing 25 of the calculated hashes)...               
+Calculated hash:
+a446393e79940877ff9592004d4f2a4b00cb8b5f479fd6107c3bf613ea83a292
+Calculated hash:
+45a671ed85005791cc6652aafca767cd95a201ce324b8894c84c69e95fc778f2
+Calculated hash:
+c2e6413f619f0db59c2f3b1dd2dd562b68c05060dccb4052e74446198396946e
+Calculated hash:
+03cccccb352d056ca2dc924d2f2ac7512f89454010128b781770918715209846
+Calculated hash:
+7e12f1722a30cdd387e6471b0d15f7ccb7de05ad41252e35543461a545b197ee
+Calculated hash:
+444cd30b70b38ef1af354056410a261888a3fa16941223741210ebdba8934576
+Calculated hash:
+7ce1e1a4ec460936f7a18d2ffdbae994df2ac171714f91d701d5f867a00bfb26
+Calculated hash:
+66d1753aa37b5bb01fc80f9fea418042ab2c09d5c420f7cc2ff013bcdc9767f2
+Calculated hash:
+217a6418f9232a09dd7c07b7158b148a2fe954e4213b4ebe449c5fe236e41979
+Calculated hash:
+e82a3d5335cf22689187f8e895693947ececd43e3761a8cb7cadf8fae6be78cc
+Calculated hash:
+cfc1ff3fb6c190b9d6ac02f8b856d0f4c40b403c1ac082df367be9519ce15261
+Calculated hash:
+767478317985ebb3bf0cc4d2f7afdb4e297ed1fe9f8deedc89b1aee4f30fbed4
+Calculated hash:
+82e39858fc151be17944ce053292b9e6e02b13bd0b2a9d072b51470fd799f069
+Calculated hash:
+f124121c699706c15e8e187385746755cef1a11ea2b8d93848749a40f79c5860
+Calculated hash:
+b318cc347e23e573f83f986f04469be15792c6c4aae777276c760fe8816088b7
+Calculated hash:
+4c82d934170ddfb4441c1e62421a5bc790f67b188fa06af099401db43486820e
+Calculated hash:
+1d7c8575d61dff6883c9aa01e9e12259c241afdb405d57b0f16991cb59201466
+Calculated hash:
+20dc554292243219484669cc187e81ec3cabb0338a0718d17b669f6b00ea11c8
+Calculated hash:
+7df8e39958e49d35f57a773655bb87b648be39e4da520583a9f142e11c006a0d
+Calculated hash:
+bad22c6c7e3498b580a916247cee0693f48fec8276ba3a60e91bf5c669334161
+Calculated hash:
+c4fc32a455c9ba0dbb3353dbb18150235c873a4a7c348247b681c58e71103269
+Calculated hash:
+a82561d936715c8966abe3cb5ea4f5629c52e76b8854b6cbd6db3f2a287156d6
+Calculated hash:
+2f826b6c3ac8cc6fc3b2834c7b8b97002b5dc5e582679eb4c34de97283ac0410
+Calculated hash:
+d7a5085d2eeb87bd670a9cb566da1dc87dae7ff34133c7818c77099ab8314261
+Calculated hash:
+b06e2c509cf8c098f5bc44f5e373390693bb28c5f6e055f6204de1b33bb709ca
+Mining finished                                                             
+1048576 iterations took: 4513.59ms
+Hash Rate: 0.232316MH/s
+No solution found. Better luck next time!
+                                                                                
+######################### End of the OpenMP Task Miner #########################
+                                                                                
+                                                                                

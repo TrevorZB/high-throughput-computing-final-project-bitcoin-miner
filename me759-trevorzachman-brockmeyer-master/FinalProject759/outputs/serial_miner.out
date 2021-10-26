@@ -1,0 +1,66 @@
+################################# Serial Miner #################################
+                                                                                
+The serial Bitcoin miner uses a naive approach of single threaded/single        
+process mining. This is the fourth fastest of the CPU Bitcoin miners.           
+                                                                                
+Iterations: 1048576
+Number of zeros needed at front of hash for hash to be small enough: 8
+Beginning Mining... (Only showing 25 of the calculated hashes)...               
+Calculated hash:
+903ce6007402efc62e8245cb4ede2278405f97863236d217054bbd46803c42f1
+Calculated hash:
+f979076ff860fba82f18bcfa6bac102ed31c31f0469e1b5dc3d81d925724e167
+Calculated hash:
+491a3189b1ce6d7243e172f11c6dfaf2c9ce2a506bcf11dc5a05a65f4c75dae4
+Calculated hash:
+49659d928ed64dfd612b51d6768c5586b98b8d4bb6d892407572bdfb2970d880
+Calculated hash:
+a446393e79940877ff9592004d4f2a4b00cb8b5f479fd6107c3bf613ea83a292
+Calculated hash:
+6d190a1bc31e576b8f73e97e588c9cdd2a1ba4d8730d607723ce884ca03a2ab3
+Calculated hash:
+a5f59b03b0e93e42a2eb530226469353b48a44b753490381a74343ada78c7e3d
+Calculated hash:
+5273bc3c5ec74bcb28460a2ed709f3f11048b235f396abcb1f50e4b0103c44e7
+Calculated hash:
+1ab133b9a61138057092af70335369f562f91c54d4f22519a7f7cc5935498bcc
+Calculated hash:
+a2df2a643d65c3aed7f8dffaa65a684dc7f7940d9bd75283a8074505db396436
+Calculated hash:
+12d93c14d0f30b134b479643a9be8cbb6a213cbc754da2858b60e6202472d22f
+Calculated hash:
+4530d0fb9745e86788e102e930fa38db46950e547aee724a48d312201721f81a
+Calculated hash:
+c55dc1b95de2b4087b8ee5fa006505c2d247f2bf9d23f64928b7f60fdd840144
+Calculated hash:
+4f0d833c43fc75ec5d39272027150c4a5e481a210187a5ea1e626e68864a2212
+Calculated hash:
+4f93e1246ae52ffe6d7dc9720669aa75bb8b89721d68595a4d24bd40102e79a2
+Calculated hash:
+3064514970a52a2d5a210d09a1ba2e7c840df46204f8979f41a9a341c43af0c4
+Calculated hash:
+c9b2968bbdf1aa66eb79beeacb7b6b33a317c9835899555bf19cdd591e65d9a6
+Calculated hash:
+3966fe5d063cde1ce5c6b22f940c38fa9c3cfd3dc5c00528f7a3fb9ccb64c526
+Calculated hash:
+feb6a492610f1225d3b92fc2ca05931141b53d27a7135471c7bcddd083d8d698
+Calculated hash:
+543129abcb7dac18912810b82057d5202bca759e273bc11b9a7a0a64a7276a67
+Calculated hash:
+4e1bd7254b3c24f16ac0767e9f27cc4f84c5dd086ad4accf55f8635a8c717252
+Calculated hash:
+7c1418d0a1ffa7c4d7ad5e078008e65997d1067cee7a490a18eac5cc965385cf
+Calculated hash:
+38c9f1eb0e17e6454b940da089c4714cd98e7ff710a56d335242251e229aba94
+Calculated hash:
+0d9cb38ef5a3b1956e94e3e2ab37444b28130e239568229dc3f58b097c308aaa
+Calculated hash:
+366609dd34148906282f241bf731eb87551a4dd54b16129aa42f15a93a241be5
+Mining finished                                                             
+1048576 iterations took: 4524.94ms
+Hash Rate: 0.231733MH/s
+No solution found. Better luck next time!
+                                                                                
+########################### End of the Serial Miner ############################
+                                                                                
+                                                                                

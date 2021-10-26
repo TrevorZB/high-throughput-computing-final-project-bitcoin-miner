@@ -1,0 +1,391 @@
+############################### Proof of Concept ###############################
+                                                                                
+Will be testing our block header structure and hashing algorithm using the data 
+present in the very first mined block of bitcoin. This block was mined on Jan   
+9th, 2009. Data can be found here: 'https://explorer.btc.com/btc/block/1'       
+                                                                                
+First, we will see if our digest is the same as the one found in 2009.          
+The actual hash found in 2009 was:                                              
+000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+The hash calculated using our block head structure and hashing algorithm was:   
+000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+Our digest is exactly the same as the one in calculated in 2009. This proves the
+algorithms used by our miners are correct.                                      
+                                                                                
+Finally, for a bitcoin to be mined, our digest must be below a target value. We 
+now check if our algorithm correctly finds the desired target and finds that our
+digest is a value that is less than this target.                                
+Our hash:                                                                       
+000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+Calculated target:                                                              
+00000000ffff0000000000000000000000000000000000000000000000000000
+Is the result digest found less than the target?                                
+Yes
+Our algorithm has successfully found our digest to be less than the target value
+                                                                                
+######################### End of the Proof of Concept ##########################
+                                                                                
+                                                                                
+################################# Serial Miner #################################
+                                                                                
+The serial Bitcoin miner uses a naive approach of single threaded/single        
+process mining. This is the fourth fastest of the CPU Bitcoin miners.           
+                                                                                
+Iterations: 1048576
+Number of zeros needed at front of hash for hash to be small enough: 8
+Beginning Mining... (Only showing 25 of the calculated hashes)...               
+Calculated hash:
+356846366dbd17201dc36135b851468d0ee27fe6e987f8f2ba2dcfbfbcd6ab4f
+Calculated hash:
+5316be518ad02f3b4ef41e0fc18dcc184cb0a404fb3d447b39121fa2052caeaa
+Calculated hash:
+e96d6c219a22b07ed53ff708c07a0330e79cd68a592b05cc637b2f32dc2f9f6d
+Calculated hash:
+a257d111512ebce63319d429d6a999daaac130b64bc441af000a55b8cd062f15
+Calculated hash:
+80af9bd260a3e03f635a814b340625c562fc3573111656496f58646cd7fe0644
+Calculated hash:
+dd8444ec6217afcc4ec220610d9ac04ba9b0b07292184b4deb47babed1432172
+Calculated hash:
+e9b2d5aa7e71fe7f89d6be05e20d7b1769b71fc79af0f0e3d96bd497ef263da4
+Calculated hash:
+5aa4ff529d61d0d821132349a93d16f802d492ed3c6b17a815243305531f7aba
+Calculated hash:
+b7526df9c86e081ab0bb07b25317dc6121498eccbee6fe61ec72cca4bb34f650
+Calculated hash:
+df4aa8d1955f8a2b7f44bb4e5d81c32b51100106669b2881cbcbbf9d5fb8ae42
+Calculated hash:
+ba92d11cb078157c4580dfc0a6844b1ff9976c81f85c61ac6f873b386b0a422d
+Calculated hash:
+040de9d4fe8846ebc538409b98122c0cb4db0cb6e22a838c41f3c019b1d1f141
+Calculated hash:
+692831f8a81ac78172856ea266a79880daf7c6bab3cab4b2f18e5730b383efca
+Calculated hash:
+e0fe1becbe5199222f8ae30b402aa1c0b1f417396284c5406aa7a9ee27fd2ad3
+Calculated hash:
+938deb875191f4459251fdba0672868faab5d5ff65f0d80473b3c7c5d9a39069
+Calculated hash:
+5f697708499e15c86575ed082de93a1e14754e6a41668d3cbe50416c69e7bbdc
+Calculated hash:
+d74f6d07f3dc11f8b231e5f9f1b6b178b537607f02596084f69bebafc1b457a7
+Calculated hash:
+38408c4a2dfb02cdbdec112bacab85f3b203347a7f61e57a06ebeb575ea3e9e4
+Calculated hash:
+0832880909cd2301736c58b9a310688c3fb915f88bdf58652676e8a752a0e9b8
+Calculated hash:
+700eaefba21071f6f6b97f3cab9e2e9cd137c6ea6a2b9dd54bc29fe736660615
+Calculated hash:
+75c93d7aaa879a37c7ba0c10b165deefde54ea6de1e01de7d15a80aeae3ee400
+Calculated hash:
+d46551aca2f28a7cd4023ee3f18fb7d35d4ff3f019769790432c43933ce908e6
+Calculated hash:
+35436b91ddc050ff5a283d4134e0259cb2660f769e3c62c933a1c7d5f2fb203f
+Calculated hash:
+45042bae4b398632494f3a107b7523e4129e44e2fb55ce874352c064a7aae4ea
+Calculated hash:
+5d3ab6531047f434073519ecb6489933a6e1321bc3e442637483b31e0e9ef201
+Mining finished                                                             
+1048576 iterations took: 5644.08ms
+No solution found. Better luck next time!
+                                                                                
+########################### End of the Serial Miner ############################
+                                                                                
+                                                                                
+############################## OpenMP Task Miner ###############################
+                                                                                
+The OpenMP Task Bitcoin miner uses OpenMP task generation to share work during  
+the hashing process. This is the third fastest of the CPU Bitcoin miners.       
+                                                                                
+Iterations: 1048576
+Threads: 18
+Number of zeros needed at front of hash for hash to be small enough: 8
+Beginning Mining... (Only showing 25 of the calculated hashes)...               
+Calculated hash:
+5aa4ff529d61d0d821132349a93d16f802d492ed3c6b17a815243305531f7aba
+Calculated hash:
+01408afa0778fe798fd7e1cd93d787b18a7ada5ddee5a585f96cc10fe5de07bd
+Calculated hash:
+1602ac417b88e7cc3a6e3e1b66d4120011cfddca31956ffc3eb8f93863c9e47f
+Calculated hash:
+2aeb6ed75d971a73f5aeccdb271bf43d49ed6920fee1bf3b24fe21d2e3f69f67
+Calculated hash:
+80edbb583a88aa4b0dbefe0a6ef14c31e2aa185827e2e91ce499ac89c0fd76ea
+Calculated hash:
+57566d75ddc559a1107ac3275cd4735244b019ce171282df97c4ebf6138c3b79
+Calculated hash:
+8203bf9775a13befdaa27c2c05898e9a0c61935359e990b9b2979564c2809b26
+Calculated hash:
+b073788db1cfa44501f4b52b82f4a2819063d7973e0fa56154934524375a9abd
+Calculated hash:
+b82a20a1bf6e01b95da15b95f72d8e770db4537efe768617189a6ead9ea39d84
+Calculated hash:
+192fd55212d3acf4fa1e079af8b24b3f70fa24cf25932524f1fdc5cfe69e7e2f
+Calculated hash:
+b4a815a625fa7adc1a6a297caabbd95c15f8bf0ff1c9a742791fd8d0a8dc89eb
+Calculated hash:
+dc2fd8246431726f556dc89767ffcf5bcc2cc055fcea7173d63483567ec44f25
+Calculated hash:
+e136a465732d96f9bfcbd536ed9c0635085fe0419037849cc2ea49716abe3708
+Calculated hash:
+9b3bc875ac8a392201b38f893677c519abbba7dad2640d416df6cdd447d5aad9
+Calculated hash:
+7a1334e2e5088da0b66c6302468e861c1553d73a20d67478653b2493320c8b59
+Calculated hash:
+2305449ec22bd3c423a617dbbca7cefa5fc6f49214d4a8ef47d1d9e0f4b8f34c
+Calculated hash:
+6c3654a326de5d8ecd10a4be5f51c7d46fe613f1220a3e5d9fd22be9487399ca
+Calculated hash:
+7fa09fa5093fd648d51b0019f4dc4fde5d60771c5c6550b25d65880dfe7ff430
+Calculated hash:
+50e078234940aee21c6cdee7ac565782fda0587a1aec918f019aab0d997169b5
+Calculated hash:
+da002b688c1f0ec3a54e65b8d1fc60ec53b6982bf40e7bbf06f243685a0b082a
+Calculated hash:
+778080f67c519b7179fb22c6900a514fbf46f3aad2879de0d59793780883eca6
+Calculated hash:
+23d420539fc49ba9ed5066c80b38ca242037d66bfc3a487cd49f174fa5e7488d
+Calculated hash:
+99d2e2982c06170b373c53701ece268eb062e4de4306a87e12275a1f7dd4ab2a
+Calculated hash:
+60d225faa8b9a93a451e689510c8f7c16be0792650348aad901380294c164f8c
+Calculated hash:
+f71063dedc139d47ec8a1971f3798c89748d5f1ccc96587d65c5d4fbfb1b067a
+Mining finished                                                             
+1048576 iterations took: 3729.48ms
+No solution found. Better luck next time!
+                                                                                
+######################### End of the OpenMP Task Miner #########################
+                                                                                
+                                                                                
+############################ OpenMP For Loop Miner #############################
+                                                                                
+The OpenMP For Loop Bitcoin miner uses OpenMP for loops to share work during    
+the hashing process. Schedule used is static due to the balanced work load. This
+is the second fastest version of the CPU Bitcoin miner.                         
+                                                                                
+Iterations: 1048576
+Threads: 18
+Number of zeros needed at front of hash for hash to be small enough: 8
+Beginning Mining... (Only showing 25 of the calculated hashes)...               
+Calculated hash:
+356846366dbd17201dc36135b851468d0ee27fe6e987f8f2ba2dcfbfbcd6ab4f
+Calculated hash:
+5316be518ad02f3b4ef41e0fc18dcc184cb0a404fb3d447b39121fa2052caeaa
+Calculated hash:
+e96d6c219a22b07ed53ff708c07a0330e79cd68a592b05cc637b2f32dc2f9f6d
+Calculated hash:
+a257d111512ebce63319d429d6a999daaac130b64bc441af000a55b8cd062f15
+Calculated hash:
+80af9bd260a3e03f635a814b340625c562fc3573111656496f58646cd7fe0644
+Calculated hash:
+dd8444ec6217afcc4ec220610d9ac04ba9b0b07292184b4deb47babed1432172
+Calculated hash:
+e9b2d5aa7e71fe7f89d6be05e20d7b1769b71fc79af0f0e3d96bd497ef263da4
+Calculated hash:
+5aa4ff529d61d0d821132349a93d16f802d492ed3c6b17a815243305531f7aba
+Calculated hash:
+b7526df9c86e081ab0bb07b25317dc6121498eccbee6fe61ec72cca4bb34f650
+Calculated hash:
+df4aa8d1955f8a2b7f44bb4e5d81c32b51100106669b2881cbcbbf9d5fb8ae42
+Calculated hash:
+ba92d11cb078157c4580dfc0a6844b1ff9976c81f85c61ac6f873b386b0a422d
+Calculated hash:
+040de9d4fe8846ebc538409b98122c0cb4db0cb6e22a838c41f3c019b1d1f141
+Calculated hash:
+692831f8a81ac78172856ea266a79880daf7c6bab3cab4b2f18e5730b383efca
+Calculated hash:
+e0fe1becbe5199222f8ae30b402aa1c0b1f417396284c5406aa7a9ee27fd2ad3
+Calculated hash:
+938deb875191f4459251fdba0672868faab5d5ff65f0d80473b3c7c5d9a39069
+Calculated hash:
+5f697708499e15c86575ed082de93a1e14754e6a41668d3cbe50416c69e7bbdc
+Calculated hash:
+d74f6d07f3dc11f8b231e5f9f1b6b178b537607f02596084f69bebafc1b457a7
+Calculated hash:
+38408c4a2dfb02cdbdec112bacab85f3b203347a7f61e57a06ebeb575ea3e9e4
+Calculated hash:
+0832880909cd2301736c58b9a310688c3fb915f88bdf58652676e8a752a0e9b8
+Calculated hash:
+700eaefba21071f6f6b97f3cab9e2e9cd137c6ea6a2b9dd54bc29fe736660615
+Calculated hash:
+75c93d7aaa879a37c7ba0c10b165deefde54ea6de1e01de7d15a80aeae3ee400
+Calculated hash:
+d46551aca2f28a7cd4023ee3f18fb7d35d4ff3f019769790432c43933ce908e6
+Calculated hash:
+35436b91ddc050ff5a283d4134e0259cb2660f769e3c62c933a1c7d5f2fb203f
+Calculated hash:
+45042bae4b398632494f3a107b7523e4129e44e2fb55ce874352c064a7aae4ea
+Calculated hash:
+5d3ab6531047f434073519ecb6489933a6e1321bc3e442637483b31e0e9ef201
+Mining finished                                                             
+1048576 iterations took: 829.331ms
+No solution found. Better luck next time!
+                                                                                
+####################### End of the OpenMP For Loop Miner #######################
+                                                                                
+                                                                                
+######################## OpenMPI + OpenMP For Loop Miner #######################
+                                                                                
+The OpenMPI + OpenMP For Loop Bitcoin Miner utilizes OpenMPI to spawn multiple  
+processes across multiple nodes. Each process then utilizes OpenMP to spawn     
+multiple threads to share the work through the hashing process. This is the     
+fastest version of the CPU Bitcoin miner.                                       
+                                                                                
+Iterations: 1048576
+Nodes: 4
+Processes: 96
+Threads per Process: 2
+Number of zeros needed at front of hash for hash to be small enough: 8
+Beginning Mining... (Only showing 25 of the calculated hashes)...               
+Calculated hash:
+818fdf7cc977ba7146200f3d364bea1c3d00504f19da099b32834835bb66a0f3
+Calculated hash:
+93e1794d6b86b01ac6327de93c15673fc226cec36adb7c352e885e1d7d8f22e0
+Calculated hash:
+15c2528bfe7058be80828959dd76d61a0d12aaf712eab2600f6c15e3a45a91d0
+Calculated hash:
+77bf47bfb1dc66143b796170509e9447aa86e61cef14aee3c7f70da4ea67f1fa
+Calculated hash:
+81a9c15ec7deda8539b22545de5f795db0eb2af2b29b00c82347d5b5aa67a298
+Calculated hash:
+5fa162da8246475bff13e627ee746d640a43124526f4668d3f283e34cc6d21fe
+Calculated hash:
+9a8a70aa9245f4d96d67e0bd0900038975376b294e299233b523548d2c8daec8
+Calculated hash:
+addd90c72447c915f3ada326cd6adce017bb2c3731090569cfc70cf4f7902430
+Calculated hash:
+405bc021117b5926a62af15fc8143c3b5cfa29b6356a91299838218eebd6a11f
+Calculated hash:
+0d489df04517111ffb0b7320c8fbc649057a695258db19a34809818940b35b42
+Calculated hash:
+c18e1e4c42b10a3947d5f56e77ab2aba9edb6ce02bdb9b65e53f6b1028147554
+Calculated hash:
+4bf86c7e48ca276e5576f8e5436f003f7a68799f64c9852db9e7d9f2a67c5e6e
+Calculated hash:
+f4ae08f8258cbe8393efbf65bdb51ad8324c787b98a8756a815216a52195708b
+Calculated hash:
+d0fc7d4fca418f216feb76d19ef46f5dd357f0d5bb36d3406df55113c5e7d335
+Calculated hash:
+2589d3c834a773ade74f5354d9e3a60cebcb2a369eca5dfa0cc136c0940b99da
+Calculated hash:
+754ddd2042f939c3c386cb671c7cb20719fe3f3d2ad19e8b4885d43e305c6f56
+Calculated hash:
+5b89904c8f40ddf1a448a2444567a412a3359013ee3d0a136ac484e024668c25
+Calculated hash:
+718b255ae441eb8545ec3b8a3ccc39ebc7d36858ff964f5962fb1963e8733f57
+Calculated hash:
+470671eb80fb6a80ddb624d594404be9624c2d01fedd6812d8209881db477568
+Calculated hash:
+c8452faf20faa4dfda99d880ce89c9a4ebfa977621734fa0a6a629a92597d2d1
+Calculated hash:
+8a63061fd7de15d0aca3935248a3295025019b718590223885774712a8d22a30
+Calculated hash:
+d31ab557cb4bd909c4cb659fa6525e66fff0101e9eac09917bda0aac245a9da2
+Calculated hash:
+debc7255b2e2c9fe7875b72ac0df8c56062c58adf6ac46f44fcbdd0da4a3fe49
+Calculated hash:
+cbcfd949cb97127558b77ae262f690a13d1f39eed3ee8d88db3610c09add1478
+Calculated hash:
+f089068ef1c86441281d80b3ef6fa2bce4697d6a939068a2658082b0d0fafdcf
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 1
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 2
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 3
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 4
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 5
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 6
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 7
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 8
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 9
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 10
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 11
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 12
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 13
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 14
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 15
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 16
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 17
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 18
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 19
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 20
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 21
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 22
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 23
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 24
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 25
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 26
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 27
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 28
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 29
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 30
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 31
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 32
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 33
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 34
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 35
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 36
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 37
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 38
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 39
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 40
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 41
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 42
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 43
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 44
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 45
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 46
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 47
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 48
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 49
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 50
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 51
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 52
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 53
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 54
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 55
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 56
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 57
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 58
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 59
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 60
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 61
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 62
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 63
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 64
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 65
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 66
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 67
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 68
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 69
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 70
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 71
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 72
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 73
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 74
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 75
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 76
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 77
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 78
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 79
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 80
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 81
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 82
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 83
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 84
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 85
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 86
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 87
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 88
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 89
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 90
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 91
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 92
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 93
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 94
+RANK: 0 RECIEVED SUCCESS NONCE: 0 FROM RANK: 95
+Mining finished                                                             
+1048576 iterations took: 71.2599ms
+No solution found. Better luck next time!
+                                                                                
+################## End of the OpenMPI + OpenMP For Loop Miner ##################
+                                                                                
+                                                                                

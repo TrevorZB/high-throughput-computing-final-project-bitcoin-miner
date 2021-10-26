@@ -1,0 +1,5 @@
+g++ -o proof_of_concept block_header.cpp helpers.cpp mine.cpp proof_of_concept_main.cpp
+g++ -o serial_miner block_header.cpp helpers.cpp mine.cpp serial_miner.cpp serial_miner_main.cpp
+g++ -o omp_for_miner block_header.cpp helpers.cpp mine.cpp omp_for_miner.cpp omp_for_miner_main.cpp -Wall -O3 -std=c++17 -fopenmp
+g++ -o omp_task_miner block_header.cpp helpers.cpp mine.cpp omp_task_miner.cpp omp_task_miner_main.cpp -Wall -O3 -std=c++17 -fopenmp
+mpicxx mpi_miner_main.cpp block_header.cpp helpers.cpp omp_for_miner.cpp mine.cpp -Wall -O3 -o mpi_miner -std=c++17 -fopenmp

@@ -1,0 +1,28 @@
+############################### Proof of Concept ###############################
+                                                                                
+Will be testing our block header structure and hashing algorithm using the data 
+present in the very first mined block of bitcoin. This block was mined on Jan   
+9th, 2009. Data can be found here: 'https://explorer.btc.com/btc/block/1'       
+                                                                                
+First, we will see if our digest is the same as the one found in 2009.          
+The actual hash found in 2009 was:                                              
+000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+The hash calculated using our block head structure and hashing algorithm was:   
+000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+Our digest is exactly the same as the one in calculated in 2009. This proves the
+algorithms used by our miners are correct.                                      
+                                                                                
+Finally, for a bitcoin to be mined, our digest must be below a target value. We 
+now check if our algorithm correctly finds the desired target and finds that our
+digest is a value that is less than this target.                                
+Our hash:                                                                       
+000000000019d6689c085ae165831e934ff763ae46a2a6c172b3f1b60a8ce26f
+Calculated target:                                                              
+00000000ffff0000000000000000000000000000000000000000000000000000
+Is the result digest found less than the target?                                
+Yes
+Our algorithm has successfully found our digest to be less than the target value
+                                                                                
+######################### End of the Proof of Concept ##########################
+                                                                                
+                                                                                
